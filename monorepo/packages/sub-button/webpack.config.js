@@ -1,10 +1,12 @@
 /* eslint-disable no-undef, @typescript-eslint/no-var-requires */
 const path = require('path');
+const pkg = require('./package.json');
 const svgToMiniDataURI = require('mini-svg-data-uri');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/__dev__/index.tsx',
+  entry: './src/index.ts',
+  target: 'node',
+  externals: ['react', 'react-dom'],
   module: {
     rules: [
       // TS, TSX
@@ -61,19 +63,9 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.js',
-    publicPath: '/',
-    clean: true,
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src/__dev__/index.html'),
-      filename: 'index.html',
-    }),
-  ],
-  devServer: {
-    static: './dist',
-    compress: true,
-    open: false,
-    port: 3000,
+    library: {
+      name: pkg.name,
+      type: 'umd',
+    },
   },
 };
