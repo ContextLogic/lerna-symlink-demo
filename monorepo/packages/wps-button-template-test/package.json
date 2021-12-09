@@ -52,7 +52,7 @@
     "test:unit": "jest --testPathIgnorePatterns dist/*",
     "test:e2e": "nightwatch --env chrome",
     "test:e2e:md": "nightwatch --env chromeMD",
-    "test:e2e:headless": "bash ../../test/nightwatch_runner.sh"
+    "test:e2e:bg": "bash ../../test/nightwatch_runner.sh"
   },
   "eslintConfig": {
     "extends": "react-app"
