@@ -7,9 +7,9 @@
 yarn start &
 sleep 5
 
-# Runs e2e tests with the firefox browser
+# Runs e2e tests
 #
-yarn test:e2e --env firefox
+yarn test:e2e
 
 # Get test exit status, kill the process and exit
 #

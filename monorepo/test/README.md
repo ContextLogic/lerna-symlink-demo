@@ -11,6 +11,7 @@ Utilizing the `lerna run <script>` command, we can run tests for all packages al
 ## Test setup for the monorepo
 - **add-button**: both e2e and unit tests will fail
 - **sub-button**: both e2e and unit tests will pass
+- **wps-button-template-test**: e2e will pass but unit test will fail
 
 ## Testing individual package
 - **unit test**: run `yarn test:unit` <br>

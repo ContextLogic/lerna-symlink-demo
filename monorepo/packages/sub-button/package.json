@@ -50,7 +50,7 @@
     "lint": "eslint '*/**/*.{tsx,ts,js}' --fix",
     "prettier": "prettier --write './**/*.{tsx,ts,js}'",
     "test:unit": "jest --testPathIgnorePatterns dist/*",
-    "test:e2e": "nightwatch",
+    "test:e2e": "nightwatch --env firefox",
     "test:e2e:headless": "bash ../../test/nightwatch_runner.sh"
   },
   "eslintConfig": {
