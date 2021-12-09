@@ -1,29 +1,6 @@
 import axios from 'axios';
 
-const callString = "https://www.googleapis.com/customsearch/v1?key=AIzaSyCqWcIPnxmD1yawBc2eNhVVgVs_uSI1Hyk&cx=8dedd47a8c8b92bb1&q=wish parcel service"
-
-export type User = {
-    readonly id: string;
-    readonly name: string;
-}
-
-export type Merchant = {
-    readonly id: string;
-    readonly merchantname: string;
-}
-
-export type UserSvcType = {
-    readonly getUser:  (id: string) => User,
-    readonly findUser:  (id: string) => User,
-}
-
-export type MerchantSvcType = {
-    readonly getMerchant:  (id: string) => Merchant,
-    readonly findMerchant:  (id: string) => Merchant,
-    readonly getSearchResult: () => Promise<any>,
-}
-
-export const userSvcObject: UserSvcType = {
+export const userSvcObject: UserService = {
     getUser: (id: string) : User => {
         return {
             id : "1",
@@ -38,7 +15,7 @@ export const userSvcObject: UserSvcType = {
     }
 }
 
-export const merchantSvcObject: MerchantSvcType = {
+export const merchantSvcObject: MerchantService = {
     getMerchant: (id: string) : Merchant => {
         return {
             id : "1",
@@ -52,6 +29,7 @@ export const merchantSvcObject: MerchantSvcType = {
         }
     },
     getSearchResult: async () : Promise<SearchObject> => {
+        const callString = "https://www.googleapis.com/customsearch/v1?key=AIzaSyCqWcIPnxmD1yawBc2eNhVVgVs_uSI1Hyk&cx=8dedd47a8c8b92bb1&q=wish parcel service"
         const ret = {}
         try {
           const response = await axios.get(callString);
@@ -63,17 +41,38 @@ export const merchantSvcObject: MerchantSvcType = {
           console.error(error);
           return(ret as SearchObject)
         }
-      }
+    }
+}
+
+export type User = {
+    readonly id: string;
+    readonly name: string;
+}
+
+export type Merchant = {
+    readonly id: string;
+    readonly merchantname: string;
+}
+
+export type UserService = {
+    readonly getUser:  (id: string) => User,
+    readonly findUser:  (id: string) => User,
+}
+
+export type MerchantService = {
+    readonly getMerchant:  (id: string) => Merchant,
+    readonly findMerchant:  (id: string) => Merchant,
+    readonly getSearchResult: () => Promise<any>,
 }
 
 export type SearchObject = {
-  readonly data: DataObject
+    readonly data: DataObject
 };
 
 export type DataObject = {
-  readonly items: ReadonlyArray<Item>
+    readonly items: ReadonlyArray<Item>
 };
 
 export type Item = {
-  readonly link: string
+    readonly link: string
 };
