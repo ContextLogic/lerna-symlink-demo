@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test:unit": "lerna run test:unit",
-    "test:e2e": "lerna run test:e2e:bg"
+    "test:e2e": "lerna run test:e2e:dev"
   },
   "workspaces": [
     "packages/*"
