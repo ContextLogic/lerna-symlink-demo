@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import WPSButton from "wps-button";
-import LegoButton from "lego-button";
+// import WPSButton from "wps-button";
+import LegoExportButton from "lego-button";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function Home() {
@@ -23,14 +23,14 @@ export default function Home() {
           Visit WPS, the best order aggregator and bulk shipping service on the
           web!
         </p>
-        <WPSButton text="Visit Parcel" />
-        <LegoButton
+        {/* <WPSButton text="Visit Parcel" /> */}
+        <LegoExportButton
           onClick={() => {
             alert("Lego button clicked.");
           }}
         >
           Click me.
-        </LegoButton>
+        </LegoExportButton>
 
         <p className={styles.description}>
           Get started by editing{" "}
