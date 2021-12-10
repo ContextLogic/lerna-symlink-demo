@@ -6,7 +6,7 @@ type svcObjectMap = {
     merchant?: lernaDemoTypes.MerchantService
 };
 
-export const GenericContext = React.createContext<svcObjectMap>(null);
+export const GenericContext = React.createContext<svcObjectMap | null>(null);
 
 export const GenericProvider = <T,>({
     m, children,
@@ -23,5 +23,5 @@ export const GenericProvider = <T,>({
     );
 };
 
-export const useGenericProviderContext = (): svcObjectMap =>
+export const useGenericProviderContext = (): svcObjectMap | null =>
   useContext(GenericContext);
