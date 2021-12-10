@@ -1,5 +1,4 @@
 import React, { ReactElement } from "react";
-import { Button } from "react-bootstrap";
 
 type Props = {
   readonly text: string;
@@ -7,13 +6,14 @@ type Props = {
 
 const WPSButton = ({ text }: Props): ReactElement => {
   return (
-    <Button
+    <button
+      id="original"
       onClick={() => {
         window.open("http://parcel.wish.com");
       }}
     >
       {text}
-    </Button>
+    </button>
   );
 };
 

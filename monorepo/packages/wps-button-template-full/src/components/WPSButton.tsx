@@ -12,7 +12,7 @@ const WPSButton = ({ text }: Props): ReactElement => {
 
   return (
     <Button
-      id={'service-test'}
+      id={'full-demo'}
       onClick={async () => {
         await merchantService?.getSearchResult().then((res) => {
           res.data?.items?.length > 0 && window.open(res.data.items[0]?.link);
