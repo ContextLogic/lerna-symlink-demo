@@ -4,6 +4,11 @@ This repo is a simple demo of local dev with lerna monorepo and some additional 
 # Get Started
 To run the demo, including fetching dependencies, building all the monorepo packages, linking them to the built in nextjs demo consumer app, and starting the next js app on dev, run `./setup.sh` from root. To do the same but simply prepare the links for another consumer app (such as MD), run `./link.sh`.
 
+# Adding packages
+To add new packages, checkout the https://github.com/ContextLogic/cra-template-lerna-md repo for the template generation instructions.
+Simply `cd monorepo/packages` and run `npx create-react-app <package_name> --template file:<path_to_cra-template-lerna-md>`
+Then, modify the package as needed. Don't forget to add new packages to the setup.sh and link.sh files. 
+
 # Testing
 
 ## Overview
