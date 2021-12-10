@@ -7,4 +7,5 @@ module.exports = {
     '\\.(css|less|scss)$': 'identity-obj-proxy',
   },
   setupFilesAfterEnv: ['<rootDir>/jest-setup.ts'],
+  moduleDirectories: ["node_modules", "src"],
 };

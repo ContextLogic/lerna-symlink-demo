@@ -52,7 +52,8 @@
     "prettier": "prettier --write './**/*.{tsx,ts,js}'",
     "test:unit": "jest --testPathIgnorePatterns dist/*",
     "test:e2e:md": "nightwatch --env chromeMD",
-    "test:e2e:dev": "nightwatch --env chrome"
+    "test:e2e:dev": "nightwatch --env chrome",
+    "test:e2e:dev:bg": "bash ../../test/nightwatch_runner.sh"
   },
   "eslintConfig": {
     "extends": "react-app"

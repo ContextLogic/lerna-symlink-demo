@@ -5,4 +5,4 @@
 import ReactDOM from 'react-dom';
 import Page from 'components';
 
-ReactDOM.render(<Page />, document.getElementById('root'));
+ReactDOM.render(<Page text="WPS" svcObjectMap={null} />, document.getElementById('root'));

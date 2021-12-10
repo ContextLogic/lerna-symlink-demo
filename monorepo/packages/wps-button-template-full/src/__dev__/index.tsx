@@ -9,7 +9,7 @@ import { SearchObject } from 'types';
 
 ReactDOM.render(
   <Page
-    service={{
+    services={{
       user: {
         getUser: (id: string) => {
           return {
@@ -51,6 +51,7 @@ ReactDOM.render(
         },
       },
     }}
+    text='Wish Parcel Service'
   />,
   document.getElementById('root'),
 );
