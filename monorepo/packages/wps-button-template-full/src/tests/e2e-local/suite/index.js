@@ -5,7 +5,7 @@ module.exports = {
       .waitForElementVisible('#root')
       .assert.containsText(
         '#root',
-        'create-react-app template for use in Lerna monorepo',
+        'Wish Parcel Service',
       )
       .end();
   },

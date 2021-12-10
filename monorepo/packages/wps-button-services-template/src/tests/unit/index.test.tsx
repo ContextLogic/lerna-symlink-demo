@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import Page from '../../components';
 
 test('renders learn react link', () => {
-  render(<Page />);
+  render(<Page text="WPS" svcObjectMap={null}/>);
 
   expect(screen.getByText('create-react-app')).toBeInTheDocument();
   expect(

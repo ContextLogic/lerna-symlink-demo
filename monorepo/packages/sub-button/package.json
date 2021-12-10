@@ -45,7 +45,7 @@
   "scripts": {
     "start": "webpack serve --mode development --config webpack.config.dev.js",
     "build": "rm -rf dist && webpack --mode production --progress --config webpack.config.js",
-    "test": "yarn test:e2e",
+    "test": "yarn test:e2e:dev",
     "eject": "react-scripts eject",
     "lint": "eslint '*/**/*.{tsx,ts,js}' --fix",
     "prettier": "prettier --write './**/*.{tsx,ts,js}'",

@@ -74,7 +74,7 @@ module.exports = {
   devServer: {
     static: './dist',
     compress: true,
-    open: true,
+    open: false,
     port: 3000,
   },
 };
