@@ -1,5 +1,3 @@
-export declare const userSvcObject: UserService;
-export declare const merchantSvcObject: MerchantService;
 export declare type User = {
     readonly id: string;
     readonly name: string;
