@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import styled from 'styled-components';
 import Logo from 'assets/logo.svg';
-import { GenericProvider } from '../GenericContextProvider';
+import { GenericProvider } from './GenericContextProvider';
 import axios from 'axios';
 import lernaDemoTypes from "types";
 import WPSButton from './WPSButton';
