@@ -1,0 +1,13 @@
+# dependency directories
+node_modules/
+
+# tests
+tests_output
+chromedriver.log
+geckodriver.log
+
+# ds_store files
+.DS_Store
+._.DS_Store
+**/.DS_Store
+**/._.DS_Store

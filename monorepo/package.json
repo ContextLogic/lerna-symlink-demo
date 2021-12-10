@@ -6,6 +6,10 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
+  "scripts": {
+    "test:unit": "lerna run test:unit",
+    "test:e2e": "lerna run test:e2e:dev:bg"
+  },
   "workspaces": [
     "packages/*"
   ]
