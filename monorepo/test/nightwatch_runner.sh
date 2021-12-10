@@ -10,7 +10,7 @@ sleep 5
 
 # Runs e2e tests
 #
-yarn test:e2e
+yarn test:e2e:dev
 
 # Get test exit status, kill the process and exit
 #

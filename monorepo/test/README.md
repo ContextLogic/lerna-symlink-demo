@@ -15,7 +15,9 @@ Utilizing the `lerna run <script>` command, we can run tests for all packages al
 
 ## Testing individual package
 - **unit test**: run `yarn test:unit` <br>
-- **e2e test**: run `yarn test:e2e` <br>
+- **e2e test with dev server**: run `yarn test:e2e:dev` <br>
+- **e2e test with md**: run `yarn test:e2e:md` <br>
+- **e2e test with dev server in background **: run `yarn test:e2e:dev:bg` <br>
 - `test/nightwatch_runner.sh`: a helper script for running nightwatch e2e tests. It starts the server in background and then run tests.
 
 ## Testing globally
