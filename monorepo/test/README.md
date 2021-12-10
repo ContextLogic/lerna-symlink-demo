@@ -11,13 +11,14 @@ Utilizing the `lerna run <script>` command, we can run tests for all packages al
 ## Test setup for the monorepo
 - **add-button**: both e2e and unit tests will pass
 - **sub-button**: both e2e and unit tests will fail
-- **wps-button-template-test**: e2e will pass but unit test will fail
+- **wps-button-template-test**: e2e and unit test will pass
+- **wps-button-template-full**: e2e and unit test will pass
 
 ## Testing individual package
 - **unit test**: run `yarn test:unit` <br>
 - **e2e test with dev server**: run `yarn test:e2e:dev` <br>
 - **e2e test with md**: run `yarn test:e2e:md` <br>
-- **e2e test with dev server in background **: run `yarn test:e2e:dev:bg` <br>
+- **e2e test with dev server running in background**: run `yarn test:e2e:dev:bg` <br>
 - `test/nightwatch_runner.sh`: a helper script for running nightwatch e2e tests. It starts the server in background and then run tests.
 
 ## Testing globally
