@@ -50,8 +50,8 @@
     "lint": "eslint '*/**/*.{tsx,ts,js}' --fix",
     "prettier": "prettier --write './**/*.{tsx,ts,js}'",
     "test:unit": "jest --testPathIgnorePatterns dist/*",
-    "test:e2e": "nightwatch --env firefox",
-    "test:e2e:dev": "bash ../../test/nightwatch_runner.sh"
+    "test:e2e:dev": "nightwatch --env firefox",
+    "test:e2e:dev:bg": "bash ../../test/nightwatch_runner.sh"
   },
   "eslintConfig": {
     "extends": "react-app"
