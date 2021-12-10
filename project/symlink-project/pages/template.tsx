@@ -1,4 +1,4 @@
-import Page from "wps-button-services-template";
+import Page from "wps-button-template-full";
 import lernaDemoTypes from "types";
 import axios from "axios";
 
@@ -50,5 +50,5 @@ const svcObjectMap = {
 };
 
 export default function Template() {
-  return <Page text="WPS Service Button" svcObjectMap={svcObjectMap}></Page>;
+  return <Page text="WPS Service Button" services={svcObjectMap}></Page>;
 }

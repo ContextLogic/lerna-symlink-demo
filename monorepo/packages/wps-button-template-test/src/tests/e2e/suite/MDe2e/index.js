@@ -12,13 +12,7 @@ module.exports = {
   'Merchant Dashboard - WPS Button works': function (browser) {
     const mdpage = browser.page.mdCreateOrder();
 
-    browser.url(browser.launch_url + 'go/5fc133d802c9b34adc090b51');
-    mdpage.waitForElementVisible('@testMerchantName');
-    browser.pause(10000); // give time for page to load
-
-    browser.url(
-      browser.launch_url + 'shipping-label/create/605949835a371201b078ba93',
-    );
+    browser.url(browser.launch_url + 'lerna-demo');
     browser.waitForElementVisible('button[id~="template-test"]');
     browser.pause(2000);
     browser.click('button[id~="template-test"]');

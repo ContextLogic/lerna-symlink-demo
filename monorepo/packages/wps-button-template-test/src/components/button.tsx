@@ -9,7 +9,7 @@ const WPSButtonTemplateTest = ({ text }: Props): ReactElement => {
     <button
       id={'template-test'}
       onClick={() => {
-        window.open('https://parcel.wish.com', '_');
+        window.open('https://parcel.wish.com');
       }}>
       {text}
     </button>
