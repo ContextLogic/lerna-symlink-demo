@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import { Button } from "react-bootstrap";
-import { useGenericProviderContext } from '../GenericContextProvider';
+import { useGenericProviderContext } from './GenericContextProvider';
 
 type Props = {
     readonly text: string;
@@ -11,7 +11,7 @@ const WPSButton = ({ text }: Props): ReactElement => {
     return (
         <Button
             onClick={
-                async () => { await newMap.merchant.getSearchResult().then((res) => 
+                async () => { await newMap?.merchant?.getSearchResult().then((res) => 
                     { res.data?.items?.length > 0 && window.open(res.data.items[0]?.link) }) }
             }
         >
