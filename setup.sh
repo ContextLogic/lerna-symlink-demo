@@ -9,6 +9,7 @@ cd monorepo/packages/sub-button && yarn link && yarn build && cd -
 cd monorepo/packages/types && yarn link && yarn build && cd -
 cd monorepo/packages/wps-button-services-template && yarn link && yarn build && cd -
 cd monorepo/packages/wps-button-template-full && yarn link && yarn build && cd -
+cd monorepo/packages/wps-button-template-full-gql && yarn link && yarn build && cd -
 cd project/symlink-project && yarn link wps-button \
 && yarn link wps-button-template \
 && yarn link wps-button-template-test \
@@ -17,5 +18,6 @@ cd project/symlink-project && yarn link wps-button \
 && yarn link types \
 && yarn link wps-button-services-template \
 && yarn link wps-button-template-full \
+&& yarn link wps-button-template-gql \
 && yarn link react && yarn link react-dom
 yarn install && yarn dev

@@ -33,7 +33,6 @@ module.exports = {
         server_path: Services.geckodriver ? Services.geckodriver.path : '',
       },
     },
-
     firefox: {
       extends: 'default',
       desiredCapabilities: {

@@ -15,6 +15,9 @@ export declare type MerchantService = {
     readonly findMerchant: (id: string) => Merchant;
     readonly getSearchResult: () => Promise<any>;
 };
+export declare type GQLService = {
+    readonly getSpaceXLaunches: (limit: number) => Promise<any>;
+};
 export declare type SearchObject = {
     readonly data: DataObject;
 };
