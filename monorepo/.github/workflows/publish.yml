@@ -8,7 +8,7 @@ jobs:
         name: 🚀 publish
         runs-on: ubuntu-latest
         steps:
-            - run: echo "workflow"
+            - run: echo "workflow" # remove
             - name: 📚 checkout
               uses: actions/checkout@v2.1.1
             - name: 🟢 node
@@ -17,6 +17,7 @@ jobs:
                   node-version: '16'
             - name: 🛠 build
               run: yarn build
+            - run: ls -a # remove
             - name: 🚀 publish
               run: yarn publish
               working-directory: my-package

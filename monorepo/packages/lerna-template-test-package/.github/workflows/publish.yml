@@ -3,10 +3,10 @@ name: "🚀 publish"
 on:
   push:
     branches:
-      - 'releases/**'
+      - release-test
     paths:
-      - "packages/lerna-template-test-package"
+      - 'lerna-template-test-package/**'
 
 jobs:
     publish:
-      uses: ContextLogic/lerna-symlink-demo/monorepo/.github/workflows/publish.yml@master
+      uses: ContextLogic/lerna-symlink-demo/monorepo/.github/workflows/publish.yml@release-test
