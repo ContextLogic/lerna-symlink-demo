@@ -1,7 +1,5 @@
-import { FC, useEffect, useState } from 'react';
+import { FC } from 'react';
 import styled from 'styled-components';
-import { GQLService } from 'types';
-import useService from 'utils/useService';
 
 type Props = {
   readonly results: string;
@@ -9,7 +7,7 @@ type Props = {
 };
 
 /** Component containing result of a Google search (service demo) */
-const SpaceXLaunchResult: FC<Props> = ({ results, loading }: Props) => {
+const GQLQueryResult: FC<Props> = ({ results, loading }: Props) => {
   return (
     <>
       <h3>Sample service result:</h3>
@@ -41,4 +39,4 @@ const Container = styled.div`
   }
 `;
 
-export default SpaceXLaunchResult;
+export default GQLQueryResult;

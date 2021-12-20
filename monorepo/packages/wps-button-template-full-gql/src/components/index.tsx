@@ -2,18 +2,20 @@ import { FC, useState } from 'react';
 import styled from 'styled-components';
 import Logo from 'assets/logo.svg';
 import { Services, PageContext } from 'components/common/PageContext';
-import SpaceXLaunchResult from 'components/common/SpaceXLaunchResult';
-import WPSButton from './common/WPSButton';
+import GQLQueryResult from 'components/common/SpaceXLaunchResult';
+import LaunchesButton from './common/LaunchesButton';
+import MDButton from './common/MDButton';
 
 type Props = {
   readonly text: string;
   readonly services: Services;
+  readonly callMD?: boolean;
 };
 
 /** Top-level page */
-const Page: FC<Props> = ({ text, services }) => {
-  const [loading, setLoading] = useState(false);
-  const [results, setResults] = useState('');
+const Page: FC<Props> = ({ text, services, callMD }) => {
+  const [loading, setLoading] = useState<boolean>(false);
+  const [results, setResults] = useState<string>('');
 
   return (
     <PageContext.Provider value={services}>
@@ -22,12 +24,23 @@ const Page: FC<Props> = ({ text, services }) => {
           <pre>create-react-app</pre> template for use in Lerna monorepo
         </StyledTitle>
         <h3>Read the README for usage details!</h3>
-        <WPSButton
-          text={text}
-          setResults={setResults}
-          setLoading={setLoading}></WPSButton>
+
+        {callMD ? (
+          <MDButton
+            text={text}
+            setResults={setResults}
+            setLoading={setLoading}
+          />
+        ) : (
+          <LaunchesButton
+            text={text}
+            setResults={setResults}
+            setLoading={setLoading}
+          />
+        )}
+
         <img src={Logo} alt="React logo" />
-        <SpaceXLaunchResult results={results} loading={loading} />
+        <GQLQueryResult results={results} loading={loading} />
       </StyledContainer>
     </PageContext.Provider>
   );

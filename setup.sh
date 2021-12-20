@@ -18,6 +18,6 @@ cd project/symlink-project && yarn link wps-button \
 && yarn link types \
 && yarn link wps-button-services-template \
 && yarn link wps-button-template-full \
-&& yarn link wps-button-template-gql \
+&& yarn link wps-button-template-full-gql \
 && yarn link react && yarn link react-dom
 yarn install && yarn dev

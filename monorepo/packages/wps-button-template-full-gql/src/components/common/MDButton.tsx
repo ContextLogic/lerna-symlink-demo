@@ -10,29 +10,27 @@ type Props = {
   readonly setLoading: React.Dispatch<SetStateAction<boolean>>;
 };
 
-const WPSButton = ({ text, setResults, setLoading }: Props): ReactElement => {
+const MDButton = ({ text, setResults, setLoading }: Props): ReactElement => {
   const gqlService: GQLService = useService('gql');
-  const [input, setInput] = useState<number>(1);
-  const promise = gqlService.getSpaceXLaunches(input);
+  const promise = gqlService.getMDUserSettings({});
 
-  const retrieveLaunches = () => {
+  const retrieveUserSettings = () => {
     setLoading(true);
     promise.then((res) => {
       setResults(JSON.stringify(res, undefined, 2));
       setLoading(false);
     });
-    setInput(input + 1);
   };
 
   return (
     <Button
-      id={'full-demo'}
+      id={'md-gql-demo'}
       onClick={() => {
-        retrieveLaunches();
+        retrieveUserSettings();
       }}>
       {text}
     </Button>
   );
 };
 
-export default WPSButton;
+export default MDButton;
